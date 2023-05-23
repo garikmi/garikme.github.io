@@ -16,13 +16,18 @@
   {{ end }}
 {{ end }}
 
-<noscript>
-  <style>
-    .search_title, #search {
-      display: none;
-    }
-  </style>
-</noscript>
+<!-- add noscript if there are posts but user has js disabled -->
+{{ if .Site.RegularPages }}
+  {{ if gt (len .Site.RegularPages) 0 }}
+    <noscript>
+      <style>
+        .search_title, #search {
+          display: none;
+        }
+      </style>
+    </noscript>
+  {{ end }}
+{{ end }}
 
 {{ if .Site.RegularPages }}
   <h4 class="section_title search_title"><span>Search</span></h4>
@@ -52,6 +57,11 @@
 {{ end }}
 </body>
 
-<script type="text/javascript" src="/js/search.js"></script>
+<!-- load js if there are any posts -->
+{{ if .Site.RegularPages }}
+  {{ if gt (len .Site.RegularPages) 0 }}
+    <script type="text/javascript" src="/js/search.js"></script>
+  {{ end }}
+{{ end }}
 
 {{ partial "footer.html" . }}
