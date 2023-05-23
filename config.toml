@@ -1,0 +1,22 @@
+baseURL = "https://garik.me"
+title = "GarikMe"
+theme = "Purple-Night"
+
+[params]
+
+# projects = [
+#   { name = "Cubic-Bezier", url = "http://cubic-bezier.garik.me" },
+# ]
+
+footerURLs = [
+  { name = "github", url = "https://github.com/garikmi" },
+  { name = "hugo", url = "https://gohugo.io" },
+  { name = "theme", url = "https://plastictheme.com" }
+]
+
+[outputFormats.SearchIndex]
+baseName = "search"
+mediaType = "application/json"
+
+[outputs]
+home = [ "HTML", "RSS", "SearchIndex" ]

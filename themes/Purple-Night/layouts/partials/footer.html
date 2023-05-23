@@ -1,0 +1,9 @@
+<footer>
+  <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+  &copy; {{ dateFormat "2006" now }}
+  {{ if .Site.Params.footerURLs }}
+    {{ range .Site.Params.footerURLs }}
+      <a href="{{ .url }}" target="_blank">{{ .name }}</a>
+    {{ end }}
+  {{ end }}
+</footer>

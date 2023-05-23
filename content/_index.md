@@ -1,0 +1,5 @@
+---
+title: "Home"
+---
+
+“You just keep pushing. You just keep pushing. I made every mistake that could be made. But I just kept pushing.” - Rene Descartes
