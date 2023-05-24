@@ -45,6 +45,7 @@ body .section_title, footer {
 }
 
 .section_title span {
+  background: var(--woodsmoke);
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
@@ -162,13 +163,22 @@ article .tags {
   color: var(--shuttle_gray);
 }
 
-article p code {
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  background-color: var(--shark);
+article code {
+  background: var(--shark);
+  padding: 0.3rem;
+  border-radius: 0.5rem;
 }
 
-/*article code {
-  padding: 0.25rem;
-  background-color: #0D1117;
-}*/
+article .highlight code {
+  padding: 0;
+  border-radius: 0;
+}
+
+article .highlight {
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+}
+
+article .highlight, pre, span {
+  background: var(--shark);
+}
