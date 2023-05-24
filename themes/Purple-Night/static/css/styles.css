@@ -45,7 +45,6 @@ body .section_title, footer {
 }
 
 .section_title span {
-  background: var(--woodsmoke);
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
@@ -169,16 +168,20 @@ article code {
   border-radius: 0.5rem;
 }
 
-article .highlight code {
-  padding: 0;
-  border-radius: 0;
-}
-
 article .highlight {
+  margin-top: 0.5rem;
   padding: 0.2rem 1rem;
   border-radius: 1rem;
 }
 
-article .highlight, pre, span {
+article .highlight pre code {
+  padding: 0;
+  border-radius: 0;
+}
+
+article .highlight, 
+article .highlight pre, 
+article .highlight pre code,
+article .highlight pre code span {
   background: var(--shark);
 }
