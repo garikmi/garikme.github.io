@@ -105,6 +105,10 @@ body a:hover time {
   outline-offset: 2px;
 }
 
+#search input::placeholder {
+  color: var(--shuttle_gray);
+}
+
 .search-item-body {
   color: var(--shuttle_gray);
 }
@@ -164,7 +168,7 @@ article .tags {
 
 article code {
   background: var(--shark);
-  padding: 0.3rem;
+  padding: 0.2rem 0.3rem;
   border-radius: 0.5rem;
 }
 
