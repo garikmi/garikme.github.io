@@ -5,28 +5,24 @@
 
 <div id="content">{{ .Content }}</div>
 
-{{ if .Site.Params.projects }}
-  {{ if gt (len .Site.Params.projects) 0 }}
-    <h4 class="section_title">Recent Projects</h4>
-    <div id="projects">
-      {{ range .Site.Params.projects }}
-        <span><a href="{{ .url }}" target="_blank">{{ .name }}</a></span>
-      {{ end }}
-    </div>
-  {{ end }}
+{{ if (and .Site.Params.projects (gt (len .Site.Params.projects) 0)) }}
+  <h4 class="section_title">Recent Projects</h4>
+  <div id="projects">
+    {{ range .Site.Params.projects }}
+      <span><a href="{{ .url }}" target="_blank">{{ .name }}</a></span>
+    {{ end }}
+  </div>
 {{ end }}
 
 <!-- add noscript if there are posts but user has js disabled -->
-{{ if .Site.RegularPages }}
-  {{ if gt (len .Site.RegularPages) 0 }}
-    <noscript>
-      <style>
-        .search_title, #search {
-          display: none;
-        }
-      </style>
-    </noscript>
-  {{ end }}
+{{ if (and .Site.RegularPages (gt (len .Site.RegularPages) 0)) }}
+  <noscript>
+    <style>
+      .search_title, #search {
+        display: none;
+      }
+    </style>
+  </noscript>
 {{ end }}
 
 {{ if .Site.RegularPages }}
@@ -36,15 +32,13 @@
   </div>
 {{ end }}
 
-{{ if .Site.RegularPages }}
-  {{ if gt (len .Site.RegularPages) 0 }}
-    <h4 class="section_title"><span>Posts</span></h4>
-    <div id="posts">
-      {{ range.Data.Pages }}
-        <a href="{{ .RelPermalink }}">{{ .Title }} • <time datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00"}}">{{ .Date.Format "January 2, 2006" }}</time></a>
-      {{ end }}
-    </div>
-  {{ end }}
+{{ if (and .Site.RegularPages (gt (len .Site.RegularPages) 0)) }}
+  <h4 class="section_title"><span>Posts</span></h4>
+  <div id="posts">
+    {{ range.Data.Pages }}
+      <a href="{{ .RelPermalink }}">{{ .Title }} • <time datetime="{{.Date.Format "2006-01-02T15:04:05Z07:00"}}">{{ .Date.Format "January 2, 2006" }}</time></a>
+    {{ end }}
+  </div>
 {{ end }}
 
 {{ if .Site.Taxonomies.categories }}
@@ -58,10 +52,8 @@
 </body>
 
 <!-- load js if there are any posts -->
-{{ if .Site.RegularPages }}
-  {{ if gt (len .Site.RegularPages) 0 }}
-    <script type="text/javascript" src="/js/search.js"></script>
-  {{ end }}
+{{ if (and .Site.RegularPages (gt (len .Site.RegularPages) 0)) }}
+  <script type="text/javascript" src="/js/search.js"></script>
 {{ end }}
 
 {{ partial "footer.html" . }}
