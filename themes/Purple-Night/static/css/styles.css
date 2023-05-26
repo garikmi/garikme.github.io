@@ -142,8 +142,14 @@ body a:hover time {
   margin-top: 3rem;
 }
 
-article h1, h2 {
+article h1,
+article h2 {
   color: var(--cornflower_blue);
+}
+
+article h5,
+article h6 {
+  margin-top: 0;
 }
 
 article .title, .info {
