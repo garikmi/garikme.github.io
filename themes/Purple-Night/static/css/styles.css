@@ -172,20 +172,19 @@ article code {
   border-radius: 0.5rem;
 }
 
-article .highlight {
+article pre {
   margin-top: 0.5rem;
   padding: 0.2rem 1rem;
   border-radius: 1rem;
 }
 
-article .highlight pre code {
+article pre code {
   padding: 0;
   border-radius: 0;
 }
 
-article .highlight, 
-article .highlight pre, 
-article .highlight pre code,
-article .highlight pre code span {
+article pre, 
+article pre code,
+article pre code span {
   background: var(--shark);
 }
