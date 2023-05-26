@@ -166,25 +166,26 @@ article .tags {
   color: var(--shuttle_gray);
 }
 
-article code {
+code {
   background: var(--shark);
   padding: 0.2rem 0.3rem;
   border-radius: 0.5rem;
 }
 
-article pre {
+pre, 
+pre code,
+pre code span {
+  background: var(--shark) !important;
+}
+
+pre {
+  background: var(--shark);
   margin-top: 0.5rem;
   padding: 0.2rem 1rem;
   border-radius: 1rem;
 }
 
-article pre code {
+pre code {
   padding: 0;
   border-radius: 0;
-}
-
-article pre, 
-article pre code,
-article pre code span {
-  background: var(--shark);
 }
