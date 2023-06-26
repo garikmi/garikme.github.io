@@ -15,6 +15,7 @@
   --dodger_blue: #1085FF;
   --rob_roy: #E9D16C;
   --valencia: #D74E42;
+  --highlight: rgba(229, 192, 123, 0.4);
 }
 
 * {
@@ -77,7 +78,8 @@ body a:hover time {
 
 .search-item mark {
   color: var(--cadet_blue);
-  font-weight: bold;
+  background: var(--highlight);
+  /* font-weight: bold; */
 }
 
 #logo {
