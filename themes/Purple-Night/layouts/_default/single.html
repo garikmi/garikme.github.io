@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ partial "header.html" . }}
+
+<body>
+  <article>
+    <h1 class="title"><a href="{{ .Site.BaseURL }}">..</a>/{{ .Title }}</h1>
+    <h3 class="info">{{ .PublishDate.Format "January 2, 2006" }} • {{ math.Round (div (countwords .Content) 220.0) }} min</h3>
+    {{ $items := .Params.categories }}
+    {{ range $index, $value := $items }}
+      <h4 class="tags">{{ $value }}{{ if (and (gt (len $items) 0) (lt $index (sub (len $items) 1))) }},{{ end }}</h4>
+    {{ end }}
+    
+    {{ .Content }}
+  </article>
+
+  {{ partial "footer.html" . }}
+</body>
+
+</html>

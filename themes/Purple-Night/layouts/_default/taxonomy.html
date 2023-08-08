@@ -1,0 +1,16 @@
+{{ partial "header.html" . }}
+
+<body>
+  {{ partial "logo.html" . }}
+
+  <h4 class="section_title"><span>{{ .Title }}</span></h4>
+  <div id="posts">
+    {{ range .Data.Pages }}
+      <a href="{{ .RelPermalink }}">
+        {{ .Title }} • <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      </a>
+    {{ end }}
+  </div>
+
+  {{ partial "footer.html" . }}
+</body>

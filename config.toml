@@ -1,0 +1,38 @@
+baseURL = "https://garik.me"
+title = "GarikMe"
+theme = "Purple-Night"
+
+[params]
+
+# projects = [
+#   { name = "Cubic-Bezier", url = "http://cubic-bezier.garik.me" },
+# ]
+
+footerURLs = [
+  { name = "github", url = "https://github.com/garikmi" },
+  { name = "hugo", url = "https://gohugo.io" },
+  { name = "theme", url = "https://plastictheme.com" }
+]
+
+[outputFormats.SearchIndex]
+baseName = "search"
+mediaType = "application/json"
+
+[outputs]
+home = [ "HTML", "RSS", "SearchIndex" ]
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = false # not yet supported
+    noClasses = true
+    noHl = false
+    style = 'onedark'
+    tabWidth = 4

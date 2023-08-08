@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ partial "header.html" . }}
+
+<body>
+  {{ partial "logo.html" . }}
+
+  <div id="not_found">
+    <a href="{{ .Site.BaseURL }}">..</a>/404
+  </div>
+</body>
+
+{{ partial "footer.html" . }}
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ partial "header.html" . }}
+
+<body>
+    {{ partial "logo.html" . }}
+
+    <div id="content">{{ .Content }}</div>
+
+    {{ if (and .Site.Params.projects (gt (len .Site.Params.projects) 0)) }}
+    <h4 class="section_title">Recent Projects</h4>
+    <div id="projects">
+        {{ range .Site.Params.projects }}
+        <span><a href="{{ .url }}" target="_blank">{{ .name }}</a></span>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- add noscript if there are posts but user has js disabled -->
+    {{ if (and .Site.RegularPages (gt (len .Site.RegularPages) 0)) }}
+    <noscript>
+        <style>
+            .search_title,
+            #search {
+                display: none;
+            }
+        </style>
+    </noscript>
+    {{ end }}
+
+    {{ if .Site.RegularPages }}
+    <h4 class="section_title search_title"><span>Search</span></h4>
+    <div id="search">
+        <input id="search_input" type="text" placeholder="search" name="name">
+    </div>
+    {{ end }}
+
+    {{ if (and .Site.RegularPages (gt (len .Site.RegularPages) 0)) }}
+    <h4 class="section_title"><span>Posts</span></h4>
+    <div id="posts">
+        {{ range.Data.Pages }}
+        <a href="{{ .RelPermalink }}">{{ .Title }} • <time datetime="{{.Date.Format " 2006-01-02T15:04:05Z07:00"}}">{{
+                .Date.Format "January 2, 2006" }}</time></a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if .Site.Taxonomies.categories }}
+    <h4 class="section_title"><span>Categories</span></h4>
+    <div id="categories">
+        {{ range .Site.Taxonomies.categories }}
+        <span><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}({{ .Count }})</a></span>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    {{ partial "footer.html" . }}
+</body>
+
+<!-- load js if there are any posts -->
+{{ if (and .Site.RegularPages (gt (len .Site.RegularPages) 0)) }}
+<script type="text/javascript" src="/js/search.js"></script>
+{{ end }}
+
+</html>

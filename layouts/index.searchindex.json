@@ -1,0 +1,7 @@
+[
+  {{range $index, $page := .Site.RegularPages}}
+    {{if gt $index 0}} , {{end}}
+    {{$entry := dict "uri" $page.RelPermalink "title" $page.Title "date" ($page.Date.Format "January 2, 2006") "content" ($page.Content | plainify)}}
+    {{$entry | jsonify}}
+  {{end}}
+]
