@@ -9,7 +9,7 @@
     <div id="content">{{ .Content }}</div>
 
     {{ if (and .Site.Params.projects (gt (len .Site.Params.projects) 0)) }}
-    <h4 class="section_title">Recent Projects</h4>
+    <h4 class="section_title"><span>Recent Projects</span></h4>
     <div id="projects">
         {{ range .Site.Params.projects }}
         <span><a href="{{ .url }}" target="_blank">{{ .name }}</a></span>

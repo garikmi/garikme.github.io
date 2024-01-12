@@ -4,9 +4,9 @@ theme = "Purple-Night"
 
 [params]
 
-# projects = [
-#   { name = "Cubic-Bezier", url = "http://cubic-bezier.garik.me" },
-# ]
+projects = [
+  { name = "CmdBar", url = "https://cmdbar.app" },
+]
 
 footerURLs = [
   { name = "github", url = "https://github.com/garikmi" },
