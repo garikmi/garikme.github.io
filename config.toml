@@ -1,5 +1,5 @@
 baseURL = "https://garik.me"
-title = "GarikMe"
+title = "Kolokolnikov"
 theme = "Purple-Night"
 
 [params]
@@ -11,7 +11,6 @@ projects = [
 footerURLs = [
   { name = "github", url = "https://github.com/garikmi" },
   { name = "hugo", url = "https://gohugo.io" },
-  { name = "theme", url = "https://plastictheme.com" }
 ]
 
 [outputFormats.SearchIndex]
