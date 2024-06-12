@@ -1,20 +1,24 @@
 baseURL = "https://garik.me"
-title = "Kolokolnikov"
-theme = "Purple-Night"
+title   = "Kolokolnikov"
+theme   = "Purple-Night"
 
 [params]
 
 projects = [
-  { name = "CmdBar", url = "https://cmdbar.app" },
+  { name = "CmdBar",     url = "https://cmdbar.app" },
+  { name = "Cliker",     url = "https://github.com/garikmi/Clicker" },
+  { name = "Cliker",     url = "https://github.com/garikmi/Reloader" },
+  { name = "Snippetbin", url = "https://snippetbin.cc/" },
+  { name = "Linksnip",   url = "https://linksnip.co/" },
 ]
 
 footerURLs = [
   { name = "github", url = "https://github.com/garikmi" },
-  { name = "hugo", url = "https://gohugo.io" },
+  { name = "hugo",   url = "https://gohugo.io" },
 ]
 
 [outputFormats.SearchIndex]
-baseName = "search"
+baseName  = "search"
 mediaType = "application/json"
 
 [outputs]
@@ -22,16 +26,16 @@ home = [ "HTML", "RSS", "SearchIndex" ]
 
 [markup]
   [markup.highlight]
-    anchorLineNos = false
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ''
-    hl_inline = false
-    lineAnchors = ''
-    lineNoStart = 1
-    lineNos = false
+    anchorLineNos      = false
+    codeFences         = true
+    guessSyntax        = false
+    hl_Lines           = ''
+    hl_inline          = false
+    lineAnchors        = ''
+    lineNoStart        = 1
+    lineNos            = false
     lineNumbersInTable = false # not yet supported
-    noClasses = true
-    noHl = false
-    style = 'onedark'
-    tabWidth = 4
+    noClasses          = true
+    noHl               = false
+    style              = 'onedark'
+    tabWidth           = 4
