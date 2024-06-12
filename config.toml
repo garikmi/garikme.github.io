@@ -7,7 +7,7 @@ theme   = "Purple-Night"
 projects = [
   { name = "CmdBar",     url = "https://cmdbar.app" },
   { name = "Cliker",     url = "https://github.com/garikmi/Clicker" },
-  { name = "Cliker",     url = "https://github.com/garikmi/Reloader" },
+  { name = "Reloader",     url = "https://github.com/garikmi/Reloader" },
   { name = "Snippetbin", url = "https://snippetbin.cc/" },
   { name = "Linksnip",   url = "https://linksnip.co/" },
 ]
